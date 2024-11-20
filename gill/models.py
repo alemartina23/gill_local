@@ -837,9 +837,12 @@ class GILL(nn.Module):
 
         # Load the Stable Diffusion model.
         if load_sd:
-            model_id = "runwayml/stable-diffusion-v1-5"
+            model_id = os.path.join(
+                HF_CACHE_DIR,
+                "models--runwayml--stable-diffusion-v1-5/snapshots/f03de327dd89b501a01da37fc5240cf4fdba85a1",
+            )
             self.sd_pipe = StableDiffusionPipeline.from_pretrained(
-                model_id, torch_dtype=torch.float16, cache_dir=HF_CACHE_DIR
+                model_id, torch_dtype=torch.float16
             ).to("cuda")
 
         if decision_model_path is not None:
