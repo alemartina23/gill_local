@@ -22,7 +22,7 @@ from gill.config import HF_CACHE_DIR
 class GILLArgs:
     freeze_lm: bool = True
     freeze_vm: bool = True
-    opt_version: str = "facebook/opt-6.7b"
+    opt_version: str = "facebook/opt-13b"
     visual_encoder: str = "openai/clip-vit-large-patch14"
     n_visual_tokens: int = 1
     task: str = "captioning"
