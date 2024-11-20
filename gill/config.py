@@ -1,1 +1,1 @@
-HF_CACHE_DIR = "/leonardo_scratch/large/userexternal/amartina"
+HF_CACHE_DIR = "/hf_cache/"
